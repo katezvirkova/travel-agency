@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users',
     'destinations',
     'corsheaders',
+    'travel_bot',
 ]
 
 MIDDLEWARE = [
