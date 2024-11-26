@@ -6,12 +6,109 @@
     <title>Registration</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4; /* Light background color */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #f39c12;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #f39c12;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Custom Styles for Register Link */
+        .register-text {
+            font-size: 1em;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+            color: #d35400;
+        }
+
+        .invalid-feedback {
+            font-size: 0.875rem;
+            color: red;
+        }
+
+        /* Styles for the Back to Home button */
+        .back-to-home-btn {
+            background-color: #f39c12; /* Light blue color */
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 100%; /* Full width */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+            margin-top: 20px; /* Space from the previous element */
+        }
+
+        .back-to-home-btn:hover {
+            background-color:#d35400; /* Darker blue when hovered */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        .back-to-home-btn:focus {
+            outline: none; /* Remove the outline when focused */
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); /* Subtle glow effect */
+        }
+
+    </style>
 </head>
 <body>
 
-
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Register</h2>
+<div class="container">
+    <h2 class="text-center">Register</h2>
     <form id="registerForm" class="needs-validation" novalidate>
         <div class="form-group">
             <input type="text" class="form-control" id="username" placeholder="Username" required>
@@ -45,10 +142,16 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">Register</button>
     </form>
+
+    <!-- Link to Login page -->
+    <div class="register-text">
+        Already have an account? <a href="../login/login.html" class="register-link">Login here</a>
+    </div>
+
+    <button class="back-to-home-btn" onclick="window.location.href='../destinations/destinations.html'">Back to Home</button>
 </div>
 
 <script src="registration.js"></script>
-
 
 </body>
 </html>
