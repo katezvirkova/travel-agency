@@ -36,7 +36,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
                 localStorage.setItem('refresh_token', data.refresh);
                 localStorage.setItem('access_token', data.access);
                 localStorage.setItem('username', username)
-                window.location.replace("http://127.0.0.1:8080/");//change here after registration address to profile
+                window.location.href = '../destinations/destinations.html';
             } else {
                 alert("Registration failed!");
             }

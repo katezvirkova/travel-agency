@@ -11,3 +11,44 @@
     height: auto;
     border-radius: 4px;
 }
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.destination {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+.destination-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #444;
+}
