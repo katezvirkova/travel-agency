@@ -154,4 +154,5 @@ SIMPLE_JWT = {
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': 'your-secret-key',
     'AUTH_HEADER_TYPES': ('Bearer',),
+'BLACKLIST_AFTER_ROTATION': True,
 }

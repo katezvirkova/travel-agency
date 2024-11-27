@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -27,22 +28,19 @@ class DestinationList(APIView):
 class DestinationDetail(APIView):
     # permission_classes = [IsAuthenticated]
 
-    def get_object(self, slug):
-        try:
-            return Destination.objects.get(slug=slug)
-        except Destination.DoesNotExist:
-            return None
+    def get_object(self, name):
+        return get_object_or_404(Destination, name=name)
 
-    def get(self, request, slug):
-        destination = self.get_object(slug)
+    def get(self, request, name):
+        destination = self.get_object(name=name)
         if not destination:
             return Response({"error": "Destination not found."}, status=status.HTTP_404_NOT_FOUND)
 
         serializer = DestinationSerializer(destination)
         return Response(serializer.data)
 
-    def put(self, request, slug):
-        destination = self.get_object(slug)
+    def put(self, request, name):
+        destination = self.get_object(name=name)
         if not destination:
             return Response({"error": "Destination not found."}, status=status.HTTP_404_NOT_FOUND)
 
@@ -55,8 +53,8 @@ class DestinationDetail(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, slug):
-        destination = self.get_object(slug)
+    def delete(self, request, name):
+        destination = self.get_object(name=name)
         if not destination:
             return Response({"error": "Destination not found."}, status=status.HTTP_404_NOT_FOUND)
 

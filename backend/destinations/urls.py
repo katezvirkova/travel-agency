@@ -3,5 +3,6 @@ from .views import DestinationList, DestinationDetail
 
 urlpatterns = [
     path('', DestinationList.as_view(), name='destination_list'),
-    path('<slug:slug>/', DestinationDetail.as_view(), name='destination_detail'),
+    path("<str:name>/", DestinationDetail.as_view(), name="destination-detail"),
+
 ]
