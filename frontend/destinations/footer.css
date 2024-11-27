@@ -1,0 +1,48 @@
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .contact-info p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-icons i {
+    font-size: 1.5em;
+    color: #f39c12;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+footer .social-icons i:hover {
+    color: #d35400;
+}
+
+footer .address {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #bbb;
+}

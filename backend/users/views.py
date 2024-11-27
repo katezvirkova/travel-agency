@@ -6,6 +6,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
 from django.contrib.auth import authenticate
 
+
 class LoginView(APIView):
     permission_classes = [AllowAny]
 
@@ -69,12 +70,17 @@ class RegisterView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
         try:
-            refresh_token = request.data["refresh"]
+            print(request.data)  # Print incoming request data for debugging
+            refresh_token = request.data.get("refresh")
+            if not refresh_token:
+                return Response({"detail": "Refresh token missing"}, status=status.HTTP_400_BAD_REQUEST)
+
             token = RefreshToken(refresh_token)
             token.blacklist()
             return Response(status=status.HTTP_204_NO_CONTENT)

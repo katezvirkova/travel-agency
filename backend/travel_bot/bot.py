@@ -7,6 +7,8 @@ from telegram.ext import (
     filters,
     ConversationHandler,
 )
+from destinations import views
+
 
 # Conversation stages
 PRICE, DESTINATION, PAYMENT = range(3)

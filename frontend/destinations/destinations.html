@@ -4,17 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations</title>
+    <link rel="stylesheet" href="header.css"> <!-- Styles for header -->
     <link rel="stylesheet" href="destinations_styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="footer.css">
+
 </head>
 <body>
-    <div id="main">
-        <!-- Destinations will be loaded here -->
-    </div>
-    <div id="map"></div>
-    <!--for google map api integration -->
+    <header>
+<div class="top-bar">
+    <a href="../login/login.html" id="login-btn" class="login-btn">Log in</a>
+    <a href="../registration/registration.html" id="register-btn" class="register-btn">Registration</a>
+    <a href="destinations.html" id="logout-btn" class="logout-btn">Log out</a>
+</div>
 
+
+<div id="user-name"></div> <!-- This is where the username will be displayed -->
+
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <nav>
+                <a href="https://web.telegram.org/k/#@trevel_agency_bot"><button>Contact to manager</button></a>
+                <a href="about.html"><button>About Us</button></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="main" class="destinations-grid">
+        <!-- Туристичні напрямки будуть завантажені сюди -->
+        </div>
+    </main>
+
+    <div id="map"></div> <!-- For Google Maps API integration -->
+
+    <footer>
+        <h2>Контактна Інформація</h2>
+        <div class="contact-info">
+            <p>Телефон: +38 (044) 123-45-67</p>
+            <p>Електронна пошта: kvytok_v_odin_kinez@gmail.com</p>
+        </div>
+        <div class="address">
+            <p>Адреса офісу: вул. Григорія Сковороди,2 Київ, Україна</p>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </footer>
 
 
     <script src="destinations_script.js"></script> <!-- Link to your JS file -->
+
 </body>
 </html>
+
