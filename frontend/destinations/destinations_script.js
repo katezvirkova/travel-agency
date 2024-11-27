@@ -68,6 +68,7 @@ async function renderPage() {
                 <p><strong>Country:</strong> ${destination.country}</p>
                 <p>${destination.description}</p>
                 <p>Ціна: ${destination.slug}</p>
+                <button onclick="seeMore()">Більше</button>
                <a href="https://web.telegram.org/k/#@trevel_agency_bot" id="buyLink">
                     <button onclick="buyButton(event)">Купити</button>
                </a>
