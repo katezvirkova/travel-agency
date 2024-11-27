@@ -32,6 +32,8 @@ def destination(db, travel_agent):
         country="France",
         created_by=travel_agent
     )
+
+
 @pytest.fixture
 def create_user(db):
     def make_user(username, email, password, is_travel_agent=False):

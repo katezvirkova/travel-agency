@@ -15,6 +15,8 @@ def test_login_user(api_client, create_user):
     assert "access" in response.data
     assert "refresh" in response.data
 
+
+
 @pytest.mark.django_db
 def test_login_with_invalid_credentials(api_client, create_user):
     create_user("testuser", "testuser@example.com", "testpassword")

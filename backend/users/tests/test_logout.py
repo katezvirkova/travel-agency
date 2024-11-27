@@ -25,6 +25,10 @@ class LogoutViewTest(APITestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
+
+
+
+
     def test_logout_missing_refresh_token(self):
         # Make a POST request without a refresh token
         response = self.client.post("/users/logout/", format='json')

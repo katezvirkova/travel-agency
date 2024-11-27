@@ -6,6 +6,8 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Destination
 from .serializers import DestinationSerializer
 
+
+
 class DestinationList(APIView):
     # permission_classes = [IsAuthenticated]
 
