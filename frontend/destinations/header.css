@@ -21,15 +21,26 @@ header {
     padding: 10px 20px;
 }
 
-.top-bar .login-btn {
+.top-bar .login-btn,
+.top-bar .logout-btn,
+.top-bar .register-btn {
+    display: inline-block; /* Make the links behave like block-level buttons */
     background-color: #d35400;
-    border: none;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
 }
+
+.top-bar .login-btn:hover,
+.top-bar .logout-btn:hover,
+.top-bar .register-btn:hover {
+    background-color: #e67e22; /* Lighter orange for hover effect */
+}
+
 
 .header-content {
     display: flex;
